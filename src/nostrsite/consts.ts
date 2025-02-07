@@ -15,6 +15,7 @@ export const KIND_LIVE_EVENT = 30311;
 export const KIND_VIDEO_HORIZONTAL = 34235;
 export const KIND_VIDEO_VERTICAL = 34236;
 export const KIND_MUSIC = 31337;
+export const KIND_RECIPE = 35000;
 export const SUPPORTED_KINDS = [
   KIND_NOTE,
   KIND_OLAS,
@@ -23,6 +24,7 @@ export const SUPPORTED_KINDS = [
   KIND_MUSIC,
   KIND_VIDEO_HORIZONTAL,
   KIND_VIDEO_VERTICAL,
+  KIND_RECIPE,
 ];
 export const JQUERY = "https://code.jquery.com/jquery-3.5.1.min.js";
 export const DEFAULT_MAX_LIMIT = 20;

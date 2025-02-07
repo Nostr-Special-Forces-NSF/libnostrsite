@@ -14,6 +14,7 @@ import {
   KIND_SITE,
   KIND_VIDEO_HORIZONTAL,
   KIND_VIDEO_VERTICAL,
+  KIND_RECIPE,
   SUPPORTED_KINDS,
 } from "../consts";
 import { Profile } from "../types/profile";
@@ -357,6 +358,8 @@ export class NostrParser {
       case KIND_VIDEO_HORIZONTAL:
       case KIND_VIDEO_VERTICAL:
         return await this.parseVideo(e);
+      case KIND_RECIPE:
+        return this.parseRecipe(e);
       default:
         return await this.parseEventDefault(e);
       // case KIND_MUSIC:
@@ -618,6 +621,30 @@ export class NostrParser {
 
     // see notes in parseNote
     post.markdown = content.replace(new RegExp("\n", "gi"), "<br>");
+
+    return post;
+  }
+  
+  private parseRecipe(e: NDKEvent) {
+    if (e.kind !== KIND_RECIPE) throw new Error("Bad kind: " + e.kind);
+
+    const post = this.parseEventDefault(e);
+
+	let details = `## Details\n\n`;
+	details += e.hasTag("prep_time") ? `- ⏲️ Prep time: ${e.tagValue("prep_time")}\n` : ``;
+	details += e.hasTag("cook_time") ? `- 🍳 Cook time: ${e.tagValue("cook_time")}\n` : ``;
+	details += e.hasTag("servings") ? `- 🍽️ Servings: ${e.tagValue("servings")}\n` : ``;
+
+    const ingredients =
+      `## Ingredients\n\n` +
+      e
+        .getMatchingTags("ingredients")
+        .map(([_, item, qty]) => `- ${qty} ${item}`)
+        .join("\n");
+
+	const directions = `## Directions\n\n${e.content}`;
+
+	post.markdown = `${details}\n${ingredients}\n${directions}`;
 
     return post;
   }
