@@ -22,9 +22,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@nostr-dev-kit/ndk": "2.8.2",
+    "@nostr-dev-kit/ndk": "^2.4.0",
     "@tryghost/tpl": "^0.1.29",
-    "browser-hbs": "^1.0.0",
+    "browser-hbs": "file:../browser-hbs",
     "cheerio": "^1.0.0-rc.12",
     "dexie": "^4.0.7",
     "downsize-cjs": "^1.0.1",

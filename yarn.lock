@@ -202,19 +202,12 @@
   dependencies:
     "@noble/hashes" "1.3.1"
 
-"@noble/curves@^1.4.0":
-  version "1.8.1"
-  resolved "https://registry.npmjs.org/@noble/curves/-/curves-1.8.1.tgz"
-  integrity sha512-warwspo+UYUPep0Q+vtdVB4Ugn8GGQj8iyB3gnRWsztmUHTI3S1nhdiWNsPUGL0vud7JlRRk1XEu7Lq1KGTnMQ==
-  dependencies:
-    "@noble/hashes" "1.7.1"
-
 "@noble/hashes@1.3.1":
   version "1.3.1"
   resolved "https://registry.npmjs.org/@noble/hashes/-/hashes-1.3.1.tgz"
   integrity sha512-EbqwksQwz9xDRGfDST86whPBgM65E0OH/pCgqW0GBVzO22bNE+NuIbeTb714+IfSjU3aRk47EUvXIb5bTsenKA==
 
-"@noble/hashes@1.7.1", "@noble/hashes@^1.3.1":
+"@noble/hashes@^1.3.1":
   version "1.7.1"
   resolved "https://registry.npmjs.org/@noble/hashes/-/hashes-1.7.1.tgz"
   integrity sha512-B8XBPsn4vT/KJAGqDzbwztd+6Yte3P4V7iafm24bxgDe/mlRuK6xmWPuCNrKt2vDafZ8MfJLlchDG/vYafQEjQ==
@@ -229,12 +222,11 @@
   resolved "https://registry.npmjs.org/@noble/secp256k1/-/secp256k1-2.2.3.tgz"
   integrity sha512-l7r5oEQym9Us7EAigzg30/PQAvynhMt2uoYtT3t26eGDVm9Yii5mZ5jWSWmZ/oSIR2Et0xfc6DXrG0bZ787V3w==
 
-"@nostr-dev-kit/ndk@2.8.2":
-  version "2.8.2"
-  resolved "https://registry.npmjs.org/@nostr-dev-kit/ndk/-/ndk-2.8.2.tgz"
-  integrity sha512-+dOEyuYvO5/MoI5iTi8C5HifmvfeEvpybNesluVYyu+o+koFdfc+WSYH050V8+9KlOgx8nOZAaqXnHz0KY1gBA==
+"@nostr-dev-kit/ndk@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@nostr-dev-kit/ndk/-/ndk-2.4.0.tgz#ec017b994759e38fb84afc866fb62cf90ebebffc"
+  integrity sha512-IdL6F/o0p1oVmII6om5ErJ+LarO2hjbRoqYfz8DlSBWVNT/uAx/GdtlJG0qlAdg5PPzDyf3Unrk0Pi/WermVjw==
   dependencies:
-    "@noble/curves" "^1.4.0"
     "@noble/hashes" "^1.3.1"
     "@noble/secp256k1" "^2.0.0"
     "@scure/base" "^1.1.1"
@@ -609,10 +601,8 @@ brace-expansion@^2.0.1:
   dependencies:
     balanced-match "^1.0.0"
 
-browser-hbs@^1.0.0:
+"browser-hbs@file:../browser-hbs":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/browser-hbs/-/browser-hbs-1.0.0.tgz#f10a210fba3a468b285435f58256d72aed9f5766"
-  integrity sha512-zX616jLCC1xXrTrejme4BokctDA7W68omMk7n64DkladM7FRSRxMbjDBCtSZQnC3fN/kRiBZE4hJoaPfsht4OQ==
   dependencies:
     handlebars "^4.7.8"
     path-browserify "^1.0.1"

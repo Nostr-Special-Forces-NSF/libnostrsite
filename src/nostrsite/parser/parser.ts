@@ -631,9 +631,9 @@ export class NostrParser {
     const post = this.parseEventDefault(e);
 
 	let details = `## Details\n\n`;
-	details += e.hasTag("prep_time") ? `- ⏲️ Prep time: ${e.tagValue("prep_time")}\n` : ``;
-	details += e.hasTag("cook_time") ? `- 🍳 Cook time: ${e.tagValue("cook_time")}\n` : ``;
-	details += e.hasTag("servings") ? `- 🍽️ Servings: ${e.tagValue("servings")}\n` : ``;
+	details += e.tagValue("prep_time") ? `- ⏲️ Prep time: ${e.tagValue("prep_time")}\n` : ``;
+	details += e.tagValue("cook_time") ? `- 🍳 Cook time: ${e.tagValue("cook_time")}\n` : ``;
+	details += e.tagValue("servings") ? `- 🍽️ Servings: ${e.tagValue("servings")}\n` : ``;
 
     const ingredients =
       `## Ingredients\n\n` +
