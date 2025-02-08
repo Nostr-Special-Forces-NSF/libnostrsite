@@ -386,7 +386,7 @@ export async function fetchEvents(
       if (eose) return;
       const id = eventId(e);
       const ex = events.get(id);
-      if (!ex || ex.created_at! < e.created_at) {
+      if (!ex || ex.created_at! < e.created_at!) {
         events.set(id, e);
       }
     });

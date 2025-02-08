@@ -22,9 +22,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@nostr-dev-kit/ndk": "^2.4.0",
+    "@nostr-dev-kit/ndk": "2.8.2",
     "@tryghost/tpl": "^0.1.29",
-    "browser-hbs": "file:../browser-hbs",
+    "browser-hbs": "^1.0.0",
     "cheerio": "^1.0.0-rc.12",
     "dexie": "^4.0.7",
     "downsize-cjs": "^1.0.1",
@@ -49,5 +49,6 @@
     "vite": "^5.2.10",
     "vite-plugin-dts": "^3.9.1",
     "vite-tsconfig-paths": "^4.3.2"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
